@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Salama Slap</title>
+
+<style>
+:root{
+  --bg:#f3f4f6;
+  --card:#ffffff;
+  --shadow:0 8px 30px rgba(15,23,42,0.08);
+  --muted:#6b7280;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;
+}
+
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%);
+  color:#0f172a;
+  padding:20px;
+}
+
+.player-card{
+  width:min(90vw,700px);
+  max-width:700px;
+  max-height:90vh;
+  background:var(--card);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:12px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.hit-area{
+  width:100%;
+  position:relative;
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.player{
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:14px;
+  overflow:hidden;
+  background:#000;
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none;
+  pointer-events:none;
+  object-fit:cover;
+}
+
+.progress{
+  width:90%;
+  height:6px;
+  border-radius:6px;
+  background:rgba(15,23,42,0.06);
+  overflow:hidden;
+}
+
+.progress > i{
+  display:block;
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#60a5fa,#7c3aed);
+  transition:width 0.05s linear;
+}
+
+@media (min-width:900px){
+  .player-card{width:600px}
+}
+</style>
+</head>
+
+<body>
+<div class="player-card">
+  <div class="hit-area">
+    <video
+      id="slapVideo"
+      class="player"
+      src="../img/slap.mp4"
+      muted
+      preload="auto"
+      playsinline
+    ></video>
+  </div>
+  <div class="progress"><i id="progFill"></i></div>
+</div>
+
+<script>
+const video = document.getElementById("slapVideo");
+const prog = document.getElementById("progFill");
+
+let duration = 1;
+let target = 0;
+let smooth = 0;
+const f = 0.14;
+
+video.addEventListener("loadedmetadata", () => {
+  duration = video.duration || 1;
+  video.currentTime = duration;
+  smooth = duration;
+});
+
+function update(x){
+  const t = Math.max(0, Math.min(1, x / window.innerWidth));
+  target = (1 - t) * duration;
+  prog.style.width = (t * 100) + "%";
+}
+
+document.addEventListener("mousemove", e => update(e.clientX));
+document.addEventListener("touchstart", e => update(e.touches[0].clientX), { passive:false });
+document.addEventListener("touchmove", e => update(e.touches[0].clientX), { passive:false });
+
+function anim(){
+  smooth += (target - smooth) * f;
+  video.currentTime = Math.max(0, Math.min(duration, smooth));
+  requestAnimationFrame(anim);
+}
+
+requestAnimationFrame(anim);
+
+document.addEventListener("keydown", e => {
+  if (!video.duration) return;
+  if (e.key === "ArrowLeft") target = Math.min(duration, target + 0.02 * duration);
+  if (e.key === "ArrowRight") target = Math.max(0, target - 0.02 * duration);
+});
+</script>
+</body>
+</html>

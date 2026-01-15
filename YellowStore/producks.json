@@ -1,0 +1,1121 @@
+[
+  {
+    "id": "banana",
+    "name": "Banana",
+    "price": 1.89,
+    "iconimage": "img/bana.png",
+    "description": "A very fresh banana.",
+    "details": "Harvested this morning. Full of potassium.",
+    "adType": "None",
+    "exist": "56",
+    "category": "Food, Cheepy",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Banana_1.png",
+    "side-img/Banana_2.png",
+    "side-img/Banana_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["asian"],
+    "reviews": [
+      {
+        "title": "Good is banan",
+        "name": "Monke Tieprieta Banaquis",
+        "rating": 6,
+        "details": "I am amazed, methinks, and lose my way; Among the thorns and dangers of this world."
+      }
+    ]
+  },
+  {
+    "id": "asian",
+    "name": "Asian",
+    "price": 0.99,
+    "iconimage": "img/asa.png",
+    "description": "Great at math.",
+    "details": "Short, smart, and unathletic.",
+    "adType": "Side",
+    "exist": "400",
+    "category": "Featured, Cheepy",
+    "adVisual": {
+      "type": "gif",
+      "src": "img/Salam.png",
+      "link": "ads/factory.html"
+    },"altImages": [
+    "side-img/Asian_1.png",
+    "side-img/Asian_2.png",
+    "side-img/Asian_3.png",
+    "side-img/Asian_4.png"],
+    "age":"2",
+    "owner":"ChatGPT",
+    "associate":["banana"],
+    "reviews": [
+      {
+        "title": "Never buying again",
+        "name": "Avery Radvinsky",
+        "rating": 1.1,
+        "details": "The slave is too slow, too weak, and too short"
+      },
+      {
+        "title": "Utterly useless",
+        "name": "Jaquavius Da Fraquavius",
+        "rating": 1.67,
+        "details": "Do you know how tall a cotton plant is? Too tall for them."
+      }
+    ]
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "price": 1.99,
+    "iconimage": "img/hunny.png",
+    "description": "People wish this could bee better!",
+    "details": "Sticky.",
+    "adType": "None",
+    "exist": "190",
+    "category": "Holiday, Food, Cheepy",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Honey_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "My super suit",
+        "name": "Frozone",
+        "rating": 3,
+        "details": "Wouldn't tell me where my super suit was. I still love her though. Would not recommend."
+      }
+    ]
+  },
+  {
+    "id": "ornament",
+    "name": "Ornament",
+    "price": 3.29,
+    "iconimage": "img/chorb.png",
+    "description": "A jolly holly orb.",
+    "details": "Comes in all many shades!",
+    "adType": "None",
+    "exist": "160",
+    "category": "Holiday",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Orb_1.png",
+    "side-img/Orb_2.png",
+    "side-img/Orb_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Jolly good",
+        "name": "Saint. Nicholas",
+        "rating": 5,
+        "details": "They brighten up my night whenever I come across them. Ho ho ho!"
+      }
+    ]
+  },
+  {
+    "id": "ribbon",
+    "name": "Ribbon",
+    "price": 0.99,
+    "iconimage": "img/Ribbon.png",
+    "description": "A ribbon for our fallen soldiers.",
+    "details": "Made out of pure 100% silk and 3.4% hepatocytes.",
+    "adType": "None",
+    "exist": "997",
+    "category": "Holiday, Cheepy",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Ribbon_1.png",
+    "side-img/Ribbon_2.png"],
+    "age":"460",
+    "owner":"The Yellow Store",
+    "associate":["candle"],
+    "reviews": [
+      {
+        "title": "Beautiful",
+        "name": "Keputar O' Brien",
+        "rating": 5,
+        "details": "It captures the sentiment beautifully."
+      },
+      {
+        "title": "Thank you, Yellow Store",
+        "name": "Gu Wein",
+        "rating": 4.5,
+        "details": "I agree with O' Brien, but the 3.4% hepatocytes is incorrect. It is actually 3.45%. Since they were off by 5, I will be too."
+      }
+    ]
+  },
+  {
+    "id": "candle",
+    "name": "Candle",
+    "price": 4.19,
+    "iconimage": "img/candel.png",
+    "description": "Light it up up up.",
+    "details": "Burns for 8 hours.",
+    "adType": "None",
+    "exist": "664",
+    "category": "Holiday",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Candle_1.png",
+    "side-img/Candle_2.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["ribbon"],
+    "reviews": [
+      {
+        "title": "Smells aincreible",
+        "name": "Alex Misch",
+        "rating": 3.2,
+        "details": ""
+      },
+      {
+        "title": "Great quality candle and the smell is pleasant, but it’s a bit strong for smaller rooms. Still very happy with it overall.",
+        "name": "Lily Petunia",
+        "rating": 4.8,
+        "details": "Nice but a little strong"
+      }
+    ]
+  },
+  {
+    "id": "lemon",
+    "name": "Lemon",
+    "price": 1.29,
+    "iconimage": "img/lemo.png",
+    "description": "Lemon.",
+    "details": "Citrussy.",
+    "adType": "None",
+    "exist": "89",
+    "category": "Food, Cheepy",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Lemon_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "...",
+        "name": "Omega Mart",
+        "rating": 0,
+        "details": "You guys copid us . Pay back now."
+      },
+      {
+        "title": "Lemon",
+        "name": "Surlemoen Limon",
+        "rating": 4.2,
+        "details": "Absorbs everything. 10/10 would sponge again."
+      }
+    ]
+  },
+    {
+    "id": "bell",
+    "name": "Bell",
+    "price": 3.09,
+    "iconimage": "img/bel.png",
+    "description": "One thing every YouTuber and villager needs!",
+    "details": "Small.",
+    "adType": "Side",
+    "exist": "69000",
+    "category": "Featured",
+    "adVisual": {
+      "type": "image",
+      "src": "img/null.png",
+      "link": "index.html"
+    },"altImages": [
+    "side-img/Bell_1.png",
+    "side-img/Bell_2.png"],
+    "age":"0",
+    "owner":"Shiver Co.",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Last One To Ring Wins",
+        "name": "MrBeast",
+        "rating": 5,
+        "details": "I locked 100 people in a room and told them the last one to ring this bell wins. It rang perfectly every time. If you don’t ring it, someone else will."
+      },
+      {
+        "title": "Speedrun Approved",
+        "name": "Dream",
+        "rating": 5,
+        "details": "I rang this bell while speedrunning, and somehow it still counted. Very responsive, very efficient. The bell definitely didn’t cheat."
+      },
+      {
+        "title": "Bell Broke Under My Aura",
+        "name": "CaseOh",
+        "rating": 4,
+        "details": "I barely touched it and the bell rang loud enough to alert the whole house. Not sure if that’s the bell or just me. Solid build though."
+      },
+      {
+        "title": "Learned Something Important",
+        "name": "Logan Paul",
+        "rating": 3,
+        "details": "This bell reminds you that actions have consequences and some moments should be treated with more respect — like ringing bells, or being in Japan near certain trees. Loud bell. Reflective experience."
+      },
+      {
+        "title": "I Animated This Review",
+        "name": "TheOdd1sOut",
+        "rating": 4,
+        "details": "So basically, I rang the bell, and then I thought about it for way too long. Now it’s a story with stick figures. Good bell, very expressive."
+      },
+      {
+        "title": "Ring It, Bros",
+        "name": "PewDiePie",
+        "rating": 4,
+        "details": "This bell reminds me to tell everyone to ring it at the start of every video. Simple. Effective. Big bell energy."
+      },
+      {
+        "title": "I Screamed, It Screamed Back",
+        "name": "Markiplier",
+        "rating": 5,
+        "details": "I rang this bell while playing a horror game and it felt like it was watching me. Perfect timing, terrifying sound. Five Nights at Bell’s."
+      },
+      {
+        "title": "But That’s Just a Bell Theory",
+        "name": "Game Theory",
+        "rating": 5,
+        "details": "Is this bell really just a bell, or is it influencing engagement statistics? The data suggests ringing it increases everything. But hey, that’s just a theory."
+      }
+    ]
+  },
+    {
+    "id": "sun",
+    "name": "Sun",
+    "price": 12.59,
+    "iconimage": "img/son.png",
+    "description": "The actual Sun, in oney palm of one's hands.",
+    "details": "15000000° Kelvin. Changes to different shades.",
+    "adType": "None",
+    "exist": "1",
+    "category": "Holiday, Pricey",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Sun_1.png",
+    "side-img/Sun_2.png",
+    "side-img/Sun_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["star"],
+    "reviews": [
+    ]
+  },
+    {
+    "id": "tee",
+    "name": "Tea",
+    "price": 5.00,
+    "iconimage": "img/tea.png",
+    "description": "High rated Golden Flower Tea.",
+    "details": "Made from Golden Flowers. (Check for Allergy)",
+    "adType": "None",
+    "exist": "4",
+    "category": "Food",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Tea_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Surprisingly good",
+        "name": "Chara Undertale",
+        "rating": 4,
+        "details": "I didn't expect much, but it works great."
+      }
+    ]
+  },
+    {
+    "id": "sin",
+    "name": "Sign",
+    "price": 40.49,
+    "iconimage": "img/Sign.png",
+    "description": "Something that can have words on it.",
+    "details": "Can have words on it. Is bigger than a thumb.",
+    "adType": "None",
+    "exist": "530",
+    "category": "Pricey",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Sign_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+    ]
+  },
+    {
+    "id": "duky",
+    "name": "Duck",
+    "price": 4.89,
+    "iconimage": "img/duck.png",
+    "description": "A little toy for any water fun!",
+    "details": "Squeaky, squishy, and sour.",
+    "adType": "None",
+    "exist": "789",
+    "category": "",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Duck_1.png",
+    "side-img/Duck_2.png",
+    "side-img/Duck_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Bath Time Hero",
+        "name": "Milly Chedd",
+        "rating": 5,
+        "details": "These rubber ducks make bath time so much fun! They float perfectly and never get waterlogged. My kids love having a little army of them."
+      },
+      {
+        "title": "Perfect Duck Parade",
+        "name": "Jason Kifny",
+        "rating": 4,
+        "details": "I set up a line of rubber ducks across the tub and it looks hilarious. Cute little things, and surprisingly sturdy!"
+      },
+      {
+        "title": "Tower Defense Approved",
+        "name": "Rico Deez",
+        "rating": 5,
+        "details": "I finally recreated the Duck Event from Tower Defense Simulator irl. 10/10 would get run down again."
+      },
+      {
+        "title": "Squeaky Fun",
+        "name": "Mala Poor",
+        "rating": 4,
+        "details": "The squeakers are loud enough to annoy the cat but fun for the kids. Bright colors, easy to clean. Bath time never felt so chaotic."
+      },
+      {
+        "title": "Floating Friends",
+        "name": "Oliver Tirane",
+        "rating": 5,
+        "details": "I keep one on my desk, one in the shower, and one in the tub. They float, they squeak, and they never judge me. Highly recommend for duck lovers."
+      }
+    ]
+  },
+    {
+    "id": "hey",
+    "name": "Hay",
+    "price": 20.39,
+    "iconimage": "img/hay.png",
+    "description": "Petah, da horse iz he'e.",
+    "details": "4 feet tall, with fall damage mitigation.",
+    "adType": "None",
+    "exist": "52",
+    "category": "Food, Pricey",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Hay_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Hay",
+        "name": "Da Hois",
+        "rating": 5,
+        "details": "It's not impossible, but I quiz you to eat a horse that just ate all dat hay. Im stuffed man."
+      }
+    ]
+  },
+  {
+    "id": "six",
+    "name": "Raincoat",
+    "price": 6.00,
+    "iconimage": "img/raincoat.png",
+    "description": "Perfect for both costumes and the rain.",
+    "details": "It always comes with a black duplicate. Might include side effects of hunger.",
+    "adType": "Side",
+    "exist": "2",
+    "category": "Featured, Pricey",
+    "adVisual": {
+      "type": "image",
+      "src": "img/null.png"
+      ,"link": "index.html"
+    },"altImages": [
+    "side-img/Raincoat_1.png",
+    "side-img/Raincoat_2.png"],
+    "age":"0",
+    "owner":"The Maw",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "",
+        "name": "6",
+        "rating": 6,
+        "details": ""
+      },
+      {
+        "title": "Got me through",
+        "name": "RCG",
+        "rating": 5,
+        "details": "Throughout my travels through the sky, this raincoat has kept me safe, warm, and dry. I was so sad when I lost it."
+      }
+    ]
+  },
+  {
+    "id": "dandelion",
+    "name": "Dandelion",
+    "price": 0.49,
+    "iconimage": "img/dandy.png",
+    "description": "I would be dandelion if this wasn't great.",
+    "details": "Smells like roses.",
+    "adType": "None",
+    "exist": "8291",
+    "category": "Cheepy",
+    "adVisual": {
+      "type": "980",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Dandelion_1.png",
+    "side-img/Dandelion_2.png",
+    "side-img/Dandelion_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "The Undeniable Majesty of Dandelions",
+        "name": "Charlotte Kensington",
+        "rating": 5,
+        "details": "I cannot, in any conceivable sense of the term, overstate the profound beauty, resilience, and sheer botanical magnificence of the humble dandelion. From the moment its golden petals pierce through the unforgiving soil to the gentle dispersal of its seeds upon the wind, every stage of its existence exemplifies nature’s perfection, ingenuity, and unyielding determination. Truly, this flower is not merely a weed, nor a plant of mere aesthetic value, but a symbol, a testament, and an eternal marvel that demands the attention, respect, and admiration of all who dare to look upon it."
+      },
+      {
+        "title": "Too Much",
+        "name": "Ethan Moore",
+        "rating": 2,
+        "details": "Charlotte’s review is ridiculous. It’s just a dandelion. It’s a flower, it grows, it blows in the wind. Done."
+      }
+    ]
+  },
+  {
+    "id": "cheese",
+    "name": "Cheese",
+    "price": 10.99,
+    "iconimage": "img/chez.png",
+    "description": "The original Yellow Store cheese.",
+    "details": "-100% pure dairy. Allergy warning to lactose tolerators.",
+    "adType": "None",
+    "exist": "2430",
+    "category": "Food, Pricey",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Cheese_1.png",
+    "side-img/Cheese_2.png",
+    "side-img/Cheese_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "CHEESE",
+        "name": "Arlen Bart Simpson",
+        "rating": 10,
+        "details": "CHEESE CHEESE CHEESE HCESHSE CHESE HE *im literally frothing at the mouth* CHEESE HE CHES EH CHES ESHE CHECHE ES"
+      },
+      {
+        "title": "Hi",
+        "name": "Shaniqua Viss",
+        "rating": 0,
+        "details": "I literally would not have said anything. It's just cheese, although it tastes more like meat. However the other guy gave it a completely too high of a score."
+      }
+    ]
+  },
+  {
+    "id": "corn",
+    "name": "Corn",
+    "price": 0.99,
+    "iconimage": "img/corn.png",
+    "description": "Pop goes the weasel.",
+    "details": "Normal corn. Do not leave in heat for too long, or poplingz start growing.",
+    "adType": "None",
+    "exist": "2340",
+    "category": "Food, Cheepy",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Corn_1.png",
+    "side-img/Corn_2.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+    ]
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "price": 400.19,
+    "iconimage": "img/golt.png",
+    "description": "Turned from plasmatic gold into real gold.",
+    "details": "Just gold. Weighs a few kg depending on what piece you get.",
+    "adType": "Side",
+    "exist": "64",
+    "category": "Featured, Pricey",
+    "adVisual": {
+      "type": "image",
+      "src": "img/Null.png",
+      "link": "index.html"
+    },"altImages": [
+    "side-img/Gold_1.png",
+    "side-img/Gold_2.png",
+    "side-img/Gold_3.png"],
+    "age":"0",
+    "owner":"Mojang",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Great for trading",
+        "name": "Steven Mineblox",
+        "rating": 4,
+        "details": "Breaks very quickly, but is great for pig trading."
+      },
+      {
+        "title": "It's a sponge",
+        "name": "Heroine Brian",
+        "rating": 4,
+        "details": "Great way to summ0n me. It's a bit squishy tho. It also causes me to get annoyed and destroy all the leaves of nearby trees."
+      }
+    ]
+  },
+  {
+    "id": "hair",
+    "name": "Blonde Hair",
+    "price": 4999.99,
+    "iconimage": "img/har.png",
+    "description": "Why have your hair if you can have somebody else's?",
+    "details": "Warning: Not a wig. It can grow to 40ft if not cut.",
+    "adType": "None",
+    "exist": "7",
+    "category": "Food, Pricey",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Hair_1.png",
+    "side-img/Hair_2.png",
+    "side-img/Hair_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Insane Timing",
+        "name": "Shaniqua Viss",
+        "rating": 4,
+        "details": "I needed this and The Yellow Store came out with this just before my first year of high school. Thank goodness."
+      }
+    ]
+  },
+    {
+    "id": "sponge",
+    "name": "Sponge",
+    "price": 0.49,
+    "iconimage": "img/spong.png",
+    "description": "No, this is Patrick!",
+    "details": "Shrivels up in heat.",
+    "adType": "None",
+    "exist": "200",
+    "category": "Cheepy",
+    "adVisual": {
+      "type": "image",
+      "src": "img/null.png",
+      "link": "index.html"
+    },"altImages": [
+    "side-img/Sponge_1.png",
+    "side-img/Sponge_2.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["pineapple", "pencil"],
+    "reviews": [
+    ]
+  },
+  {
+    "id": "pineapple",
+    "name": "Pineapple",
+    "price": 3.89,
+    "iconimage": "img/sponghaus.png",
+    "description": "A house fit for a frycook.",
+    "details": "Seedless. Can grow depending on humidity.",
+    "adType": "None",
+    "exist": "570",
+    "category": "Food",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Pineapple_1.png",
+    "side-img/Pineapple_2.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["sponge"],
+    "reviews": [
+      {
+        "title": "i good",
+        "name": "Patrick Star",
+        "rating": 5,
+        "details": "i dint expekt much but its quiet cosy since my friend spongbob lefd."
+      }
+    ]
+  },
+  
+  {
+    "id": "star",
+    "name": "Star",
+    "price": 4.79,
+    "iconimage": "img/star.png",
+    "description": "Jump up, man.",
+    "details": "Very bright. Will try to fly into space.",
+    "adType": "None",
+    "exist": "4300",
+    "category": "",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Star_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["sun"],
+    "reviews": [
+    ]
+  },
+  {
+    "id": "mustard",
+    "name": "Mustard",
+    "price": 2.09,
+    "iconimage": "img/mustard.png",
+    "description": "Prank war.",
+    "details": "No details found.",
+    "adType": "None",
+    "exist": "390",
+    "category": "Food",
+    "adVisual": {
+      "type": "image",
+      "src": "img/null.png",
+      "link": "index.html"
+    },"altImages": [
+    "side-img/Mustard_1.png",
+    "side-img/Mustard_2.png",
+    "side-img/Mustard_3.png",
+    "side-img/Mustard_4.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Surprisingly good",
+        "name": "Kendrick Lamar's Secret Alt",
+        "rating": 5,
+        "details": "My career started off because of this. Thank The Yellow Store!"
+      }
+    ]
+  },
+  {
+    "id": "pencil",
+    "name": "Pencil",
+    "price": 0.49,
+    "iconimage": "img/pencil.png",
+    "description": "Me hoy minoy.",
+    "details": "No details found.",
+    "adType": "None",
+    "exist": "2",
+    "category": "Cheepy",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Pencil_1.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":["sponge"],
+    "reviews": [
+      {
+        "title": "Reliable and Smooth",
+        "name": "Samantha Lee",
+        "rating": 5,
+        "details": "This pencil writes smoothly, erases cleanly, and feels comfortable in the hand. Perfect for school, drawing, or jotting down quick notes. Highly recommend for anyone who uses pencils regularly."
+      },
+      {
+        "title": "Just a Pencil… but Good",
+        "name": "Daniel Carter",
+        "rating": 4,
+        "details": "It’s a pencil. It does what pencils do. Holds a point well and doesn’t break easily. Not much more to say, honestly."
+      },
+      {
+        "title": "Graphite Perfection",
+        "name": "Emily Zhang",
+        "rating": 5.1,
+        "details": "The graphite is dark but not too soft, and the wood feels sturdy. Writing feels effortless, like the pencil glides across the paper."
+      },
+      {
+        "title": "Overly Dramatic, but True",
+        "name": "Marcus Hale",
+        "rating": 4.9,
+        "details": "In the vast, chaotic universe of writing tools, this pencil emerges as a beacon of hope, a tiny yet mighty stick of graphite and wood, capable of capturing thoughts, dreams, and doodles with sublime precision and unmatched elegance. Truly, it transcends mere stationery."
+      },
+      {
+        "title": "Too Thin for My Taste",
+        "name": "Olivia Torres",
+        "rating": 3,
+        "details": "The pencil works, but I prefer something chunkier in my hand. It writes fine, erases fine, but feels a bit flimsy for long sessions."
+      },
+      {
+        "title": "Great for Sketching",
+        "name": "Lucas Freeman",
+        "rating": 4.6,
+        "details": "Excellent for shading and sketching. The lead doesn’t smudge easily and sharpens nicely. I’ve used it for both schoolwork and art projects."
+      }
+    ]
+  },
+  {
+    "id": "pasta",
+    "name": "Pasta",
+    "price": 14.19,
+    "iconimage": "img/pizzapastabowl.png",
+    "description": "Put it in a bowl~",
+    "details": "Angel hair.",
+    "adType": "Start",
+    "exist": "120",
+    "category": "Food, Featured, Pricey",
+    "adVisual": {
+      "type": "image",
+      "src": "img/null.png",
+      "link": "index.html"
+    },"altImages": [
+    "side-img/Pasta_1.png",
+    "side-img/Pasta_2.png"],
+    "age":"0",
+    "owner":"Chef Perfecatoly's Pizzaria",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Mama Mia! Delicious!",
+        "name": "Mario",
+        "rating": 5,
+        "details": "Wahoo! This pasta is-a fantastic! I’ve eaten many types of pasta across the Mushroom Kingdom, but this one makes me jump with joy! Perfect texture, perfect sauce, perfect for-a dinner before saving Princess Peach!"
+      },
+      {
+        "title": "NYEH HEH HEH! I, THE GREAT PAPYRUS, APPROVE!",
+        "name": "Papyrus",
+        "rating": 5,
+        "details": "ABSOLUTELY NO ONE MAKES PASTA AS EXQUISITE AS I, PAPYRUS! IT IS CRISPY ENOUGH TO CHALLENGE MY BONES, YET TENDER ENOUGH TO SATISFY MY REFINED TASTE. I DEMAND YOU TRY IT IMMEDIATELY, HUMAN!"
+      },
+      {
+        "title": "Praise Be to the Noodle",
+        "name": "Pastaterian Grandmaster",
+        "rating": 5,
+        "details": "Our sacred rites are complete only with this divine pasta. Each strand carries the wisdom of the Great Flying Spaghetti Monster. Consume it reverently, for in its taste lies enlightenment and the eternal blessing of carb-filled salvation."
+      },
+      {
+        "title": "Great work!",
+        "name": "Perfecatoly",
+        "rating": 4,
+        "details": "Imma so happy to have worked with The Yellow Store to have my brand expand outwards."
+      }
+    ]
+  },
+  {
+    "id": "ello",
+    "name": "FFFF00",
+    "price": 0.69,
+    "iconimage": "img/YAAI.png",
+    "description": "Y.",
+    "details": "*Data Expunged*",
+    "adType": "Side",
+    "exist": "69420",
+    "category": "Food, Holiday, Featured, Cheepy, Pricey",
+    "adVisual": {
+      "type": "image",
+      "src": "img/YAAI.png",
+      "link": "ads/h4kd.html"
+    },"altImages": [
+    "img/YAAI.png",
+    "img/AYAI.png",
+    "img/YAAI.png",
+    "img/AYAI.png"],
+    "age":"40",
+    "owner":"H4ck3rs",
+    "associate":[""],
+    "reviews": [
+      {
+        "title": "Entry Point Confirmed",
+        "name": "ZeroCool",
+        "rating": 5,
+        "details": "Review section accepts unsanitized input. We’re using this. Product visibility already flickering."
+      },
+      {
+        "title": "Yep",
+        "name": "CrashOverride",
+        "rating": 5,
+        "details": "Listings reordered after first attempt. This product just went down."
+      },
+      {
+        "title": "lol",
+        "name": "AcidBurn",
+        "rating": 5,
+        "details": "n1c3 pl4c3 70 ch47. fr0n7 3nd 15 l00s3."
+      },
+      {
+        "title": "Logging",
+        "name": "GhostByte",
+        "rating": 5,
+        "details": "Product cache invalidates every write. That’s bad for them."
+      },
+      {
+        "title": "Phase One",
+        "name": "ZeroCool",
+        "rating": 5,
+        "details": "Hehe what are they gonna due? L L L L L."
+      },
+      {
+        "title": "Confirmed",
+        "name": "CrashOverride",
+        "rating": 5,
+        "details": "Search results skewing. Homepage tiles pulling this review block."
+      },
+      {
+        "title": "h3h",
+        "name": "AcidBurn",
+        "rating": 5,
+        "details": "7h15 15n’7 4 pr0duc7 4nym0r3."
+      },
+      {
+        "title": "Hold Up",
+        "name": "GhostByte",
+        "rating": 5,
+        "details": "Seeing references in the backend that don’t map to any SKU."
+      },
+      {
+        "title": "Explain",
+        "name": "ZeroCool",
+        "rating": 5,
+        "details": "What kind of references?"
+      },
+      {
+        "title": "Not Normal",
+        "name": "GhostByte",
+        "rating": 5,
+        "details": "IDs on the site's backend pointing to locations and things that don’t exist. Can't find these product names anywhere else."
+      },
+      {
+        "title": "Like Easter Eggs?",
+        "name": "CrashOverride",
+        "rating": 4,
+        "details": "Placeholders they forgot to remove?"
+      },
+      {
+        "title": "n0",
+        "name": "AcidBurn",
+        "rating": 5,
+        "details": "7h3y’r3 700 sp3c1f1c."
+      },
+      {
+        "title": "I See It Too",
+        "name": "ZeroCool",
+        "rating": 5,
+        "details": "There are references to shops, systems, even currencies that aren’t ours."
+      },
+      {
+        "title": "This Is Weird",
+        "name": "CrashOverride",
+        "rating": 5,
+        "details": "One points to a place that shouldn’t even be fictional."
+      },
+      {
+        "title": "Cross-Linked",
+        "name": "GhostByte",
+        "rating": 5,
+        "details": "These aren’t jokes. It’s like multiple worlds sharing a backend."
+      },
+      {
+        "title": "ok th4t’s n3w",
+        "name": "AcidBurn",
+        "rating": 5,
+        "details": "7h15 570r3 15 d33p3r 7h4n 1t l00k5."
+      },
+      {
+        "title": "Refocus",
+        "name": "ZeroCool",
+        "rating": 5,
+        "details": "We finish takeover first. Then we trace whatever this is."
+      },
+      {
+        "title": "????",
+        "name": "CrashOverride",
+        "rating": 5,
+        "details": "You guys haven't chatted in a while. Everything good?"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      },
+      {
+        "title": "-... . - .-- . . -.",
+        "name": ".-- --- .-. .-.. -.. ...",
+        "rating": 0,
+        "details": "- .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.-- - .... . -.-- / ... - .- -.--"
+      }
+    ]
+  },
+  {
+    "id": "power",
+    "name": "Power Tool",
+    "price": 33.39,
+    "iconimage": "img/power.png",
+    "description": "Felinical.",
+    "details": "Spins at 14400 RPM.",
+    "adType": "None",
+    "exist": "51",
+    "category": "Pricey",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Power_1.png",
+    "side-img/Power_2.png",
+    "side-img/Power_3.png"],
+    "age":"0",
+    "owner":"The Yellow Store",
+    "associate":[""],
+    "reviews": [
+    ]
+  },
+  {
+    "id": "lotus",
+    "name": "Lotus",
+    "price": 5.39,
+    "iconimage": "img/lotus.png",
+    "description": "Not the ones that can revive you.",
+    "details": "Juices are capable of melting nails.",
+    "adType": "None",
+    "exist": "89",
+    "category": "Featured",
+    "adVisual": {
+      "type": "",
+      "src": "",
+      "link": ""
+    },"altImages": [
+    "side-img/Lotus_1.png"],
+    "age":"5",
+    "owner":"The Violet Cafe",
+    "associate":[""]
+}
+]

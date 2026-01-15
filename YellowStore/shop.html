@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-sidebar-header">
+        <h2><a href="cart.html" style="text-decoration:none; color:inherit;">Your Cart</a></h2>
+        <button id="sidebar-close">X</button>
+    </div>
+    <div id="sidebar-items"></div>
+    <div class="sidebar-footer">
+        <div style="display:flex; justify-content:space-between;">
+            <span>Total:</span>
+            <span>$<span id="sidebar-total">0.00</span></span>
+        </div>
+        <br>
+    </div>
+</div>
+<body>
+<header>
+    <div class="top-nav">
+        <a href="index.html"><img src="img/YStore.png" alt="Yellogo" class="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="captcha.html">Sign In</a></li>
+            <li><a href="aous.html">About Us</a></li>
+            <li id="cart-btn">
+                <span id="cart-count">0</span>
+            </li>
+        </ul>
+    </div>
+    <div class="top-nav2">
+        <div class="other-nav">
+            <ul>
+                <li><a href="shop.html?category">All</a></li>
+                <li><a href="shop.html?category=Featured">Sponsored</a></li>
+                <li><a href="shop.html?category=Holiday">Holiday</a></li>
+                <li><a href="shop.html?category=Food">Food</a></li>
+                <li><a href="shop.html?category=Pricey">Pricey</a></li>
+                <li><a href="shop.html?category=Cheepy">Cheepy</a></li>
+                <li><a id="surprise-link">Surprise Me</a></li>
+            </ul>
+        </div>
+    </div>  
+<main>
+    <h1>Products</h1>
+    <div class="grid" id="productGrid"></div>
+</main>
+<footer>
+    <p>All rights reserved to &copy;The Yellow Store.</p>
+</footer>
+<script src="js/script.js" defer></script>
+<script src="js/cart.js"></script>
+</body>
+</html>

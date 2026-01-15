@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>10-Step Textual Torture CAPTCHA</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #captcha {
+    background: white;
+    width: 700px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  }
+  h3 { margin-top: 0; }
+  #paragraph, #stepContent {
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  input, button, #sliderWrap {
+    margin-top: 10px;
+    width: 100%;
+  }
+  #sliderWrap {
+    display: none;
+  }
+  #slider {
+    width: 100%;
+  }
+  #status {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #b00020;
+  }
+  #timer {
+    float: right;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<div id="captcha">
+  <h3>Step <span id="stepNum">1</span> of 10 <span id="timer">40</span></h3>
+  <div id="stepContent"></div>
+  <input type="text" id="answer" placeholder="Type your answer here" />
+  <button onclick="submitStep()">Submit</button>
+  <div id="sliderWrap">
+    <p>Final Step: Drag the slider to exactly 73.42%</p>
+    <input type="range" id="slider" min="0" max="100" step="0.01" value="50">
+    <button onclick="submitSlider()">Finish</button>
+  </div>
+  <div id="status"></div>
+</div>
+
+<script>
+const stepContent = document.getElementById("stepContent");
+const stepNumEl = document.getElementById("stepNum");
+const status = document.getElementById("status");
+const sliderWrap = document.getElementById("sliderWrap");
+const timerEl = document.getElementById("timer");
+let step = 1;
+let time = 50;
+let sliderDrift = 0;
+
+const steps = [
+  {
+    text: `Select all words in the paragraph that contain the letter "o". Separate by commas.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles at midnight. The fox waits silently under the moon.`,
+    validator: ans => {
+      const words = ["shadows","owl","fox","moon"];
+      return words.every(w => ans.includes(w)) && ans.split(",").length === words.length;
+    }
+  },
+  {
+    text: `Count the vowels in the 5th word of the paragraph and type the number.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles at midnight. The fox waits silently under the moon.`,
+    validator: ans => ans.trim() === "2"
+  },
+  {
+    text: `Reverse the first word of the paragraph and type it.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles at midnight.`,
+    validator: ans => ans.trim() === "nI"
+  },
+  {
+    text: `Type all words longer than 5 letters, separated by spaces.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles at midnight.`,
+    validator: ans => ans.trim() === "valley shadows speaks riddles midnight"
+  },
+  {
+    text: `Take the second letters of the first four words and type them together.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles.`,
+    validator: ans => ans.trim() === "nhaf"
+  },
+  {
+    text: `Count the number of words that start with a vowel.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles at midnight.`,
+    validator: ans => ans.trim() === "6"
+  },
+  {
+    text: `Type the 3rd, 5th, and 7th letters of the paragraph, in order (ignore spaces and punctuation).`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles.`,
+    validator: ans => {
+        const lettersOnly = steps[6].paragraph.replace(/[^a-zA-Z]/g, "");
+        const selected = lettersOnly[2] + lettersOnly[4] + lettersOnly[6];
+        return ans.trim() === selected;
+    }
+  },
+  {
+    text: `Take all words containing 's' and reverse each, separated by spaces.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles.`,
+    validator: ans => ans.trim() === "swodahs skaeps selddir"
+  },
+  {
+    text: `Sum the number of vowels in words containing 'o'.`,
+    paragraph: `In the valley of shadows, every owl speaks in riddles at midnight.`,
+    validator: ans => ans.trim() === "3"
+  },
+  {
+    text: `Final mini-math: take the number of letters in 'midnight', multiply by 2 and subtract 5.`,
+    paragraph: ``,
+    validator: ans => ans.trim() === "11"
+  }
+];
+
+setInterval(()=>{
+    time += (Math.random() < 0.3 ? 1 : -1);
+    if(time <= 0) location.reload();
+    timerEl.textContent = time;
+},1000);
+
+function loadStep() {
+    if(step > 10){
+        stepContent.textContent = "";
+        document.getElementById("answer").style.display="none";
+        sliderWrap.style.display="block";
+        stepNumEl.textContent = "10";
+        return;
+    }
+    stepNumEl.textContent = step;
+    stepContent.innerHTML = steps[step-1].text + "<br><em>"+steps[step-1].paragraph+"</em>";
+    document.getElementById("answer").value = "";
+    status.textContent = "";
+}
+
+function submitStep(){
+    const ans = document.getElementById("answer").value.trim();
+    if(steps[step-1].validator(ans)){
+        step++;
+        loadStep();
+    } else {
+        status.textContent = "Incorrect. Try again.";
+    }
+}
+
+const slider = document.getElementById("slider");
+slider.oninput = () => {
+    sliderDrift += (Math.random()*0.4-0.2);
+    slider.value = Math.min(100, Math.max(0, parseFloat(slider.value)+sliderDrift));
+}
+function submitSlider(){
+    if(parseFloat(slider.value).toFixed(2) >= 73.40 && parseFloat(slider.value).toFixed(2) <= 73.44){
+        status.style.color="green";
+        status.textContent="Verification complete. Redirecting…";
+    } else {
+        status.style.color="#b00020";
+        status.textContent="Failed final step. Restarting…";
+        step=1;
+        loadStep();
+        slider.value=50;
+        sliderWrap.style.display="none";
+    }
+}
+
+loadStep();
+
+</script>
+</body>
+</html>

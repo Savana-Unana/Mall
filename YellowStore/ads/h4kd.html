@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOU ARE AN IDIOT</title>
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      background: #111;
+      overflow: hidden;
+      font-family: sans-serif;
+      position: relative;
+    }
+
+    #h4ckr, .v1rus{
+      position: absolute;
+      height:100px;
+      width:220px;
+      font-size:20px;
+      border:none;
+      border-radius:12px;
+      background:rgb(255, 255, 255);
+      color:#000000;
+      cursor:pointer;
+      z-index:3;
+    }
+
+    #t4unt{
+      position:absolute;
+      top:20px;
+      width:100%;
+      text-align:center;
+      font-size:24px;
+      color:#ffffff;
+      pointer-events:none;
+      z-index: 9999; 
+      background-color: black;
+    }
+    .invertAll #h4ckr,
+    .invertAll .v1rus,
+    .invertAll #t4unt {
+      filter: invert(1);
+    }
+  </style>
+</head>
+<body>
+  <div id="t4unt"></div>
+  <button id="h4ckr">Click M3 For Free Fun!!1!</button>
+  <video id="bgVid" autoplay loop playsinline style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;">
+  </video>
+  <script>
+    let videoStarted = false;
+    (function() {
+      if (!localStorage.getItem("idiot_first_visit")) {
+        
+        const msgs = [
+          "h3ll0, I s33 y0u w4nt fun an6 a sal3.",
+          "W3ll h3re's the d34l.",
+          "25% OFF~!!!!!!!!!1!11!",
+          "aLl y0u h4ve to d0",
+          "1s cl1ck my 1mp0ss1-b9tton!",
+          "Have fun!",
+          ":3"
+        ];
+
+        msgs.forEach(m => alert(m));
+
+        localStorage.setItem("idiot_first_visit", "done");
+      }
+    })()
+  const h4ck = document.getElementById("h4ckr");
+  const t4unt = document.getElementById("t4unt");
+  let phase = 0;
+  let moveMain = null;
+  let moveFake = null;
+  let t4untInt = null;
+  let v1rus = [];
+  const speeds = [900, 800, 650, 450, 400, 300, 200, 100];
+  const t4unts = [
+    [":P","h4h4 g3t g00d","m1ss3d m3","n00b"],
+    ["ur sl0w","n1c3 try","my t0ast3r cl1cks","sad"],
+    ["sk1ll 1ssu3","st1ll m1ss1ng","0h n0","h4h4"],
+    ["U M4D??","f4t cl1ck f41l","br0k3??","l0l"],
+    ["t00 sl0w","try h4rd3r","u st1nk","cr4zy"],
+    ["4lm0st h4lf","th1s ph4s3 pwn u","p4n1ck","f4st3r"],
+    ["dis iz sp1cy","ur cl0s3 2 f41l","cr1ng3","pr3ssur3 g3ts t0 u"],
+    ["F1N4L","skrUb","n4h"]
+  ];
+
+  function rPos(el){
+    el.style.left = Math.random()*(innerWidth-el.offsetWidth)+"px";
+    el.style.top = Math.random()*(innerHeight-el.offsetHeight)+"px";
+  }
+
+  function resetFakes(){
+    v1rus.forEach(x=>x.remove());
+    v1rus = [];
+  }
+
+  function spawnFakeButtons(num){
+    for (let i=0;i < num;i++){
+      const b = document.createElement("button");
+      b.className="v1rus";
+      b.textContent="Click Me!";
+      document.body.appendChild(b);
+      rPos(b);
+      v1rus.push(b);
+    }
+  }
+
+  function moveFakes(){
+    v1rus.forEach(rPos);
+  }
+
+  function startPhase(p){
+    clearInterval(moveMain);
+    clearInterval(moveFake);
+    clearInterval(t4untInt);
+    resetFakes();
+    rPos(h4ck);
+    t4unt.textContent = t4unts[p][0];
+    moveMain = setInterval(()=>rPos(h4ck), speeds[p]);
+    t4untInt = setInterval(()=>{
+      const t = t4unts[p];
+      t4unt.textContent = t[Math.floor(Math.random()*t.length)];
+    }, 1500);
+    if (p === 2 || p === 3) spawnFakeButtons(p===2?1:2);
+    if (p === 6 || p === 7) spawnFakeButtons(3);
+    if (v1rus.length > 0){
+      moveFake = setInterval(moveFakes, speeds[p]);
+    }
+    if (p >= 3 && !videoStarted) {
+      videoStarted = true;
+      document.body.classList.add("invertAll");
+
+      const vid = document.getElementById("bgVid");
+      vid.src = "../img/YAAI.mp4";
+      vid.style.display = "block";
+      vid.play().catch(()=>{});
+    }
+  }
+  h4ck.addEventListener("click",()=>{
+    if (phase <8){
+      startPhase(phase);
+      phase++;
+    } 
+    else {
+      clearInterval(moveMain);
+      clearInterval(moveFake);
+      clearInterval(t4untInt);
+      resetFakes();
+      t4unt.textContent = "NOOOO!!!! dang it :(";
+      h4ck.textContent = "Go Back";
+
+      h4ck.onclick = () => {
+        alert("CR4P");
+        alert("F1ne th3 c0de iz 'swag69'");
+        hisory.back();
+      };
+    }
+  });
+  h4ck.style.left=(innerWidth/2-h4ck.offsetWidth/2)+"px";
+  h4ck.style.top=(innerHeight/2-h4ck.offsetHeight/2)+"px";
+  </script>
+</body>
+</html>

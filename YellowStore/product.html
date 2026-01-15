@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-sidebar-header">
+        <h2><a href="cart.html" style="text-decoration:none; color:inherit;">Your Cart</a></h2>
+        <button id="sidebar-close">X</button>
+    </div>
+    <div id="sidebar-items"></div>
+    <div class="sidebar-footer">
+        <div style="display:flex; justify-content:space-between;">
+            <span>Total:</span>
+            <span>$<span id="sidebar-total">0.00</span></span>
+        </div>
+        <br>
+    </div>
+</div>
+<header>
+    <div class="top-nav">
+        <a href="index.html"><img src="img/YStore.png" alt="Yellogo" class="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="captcha.html">Sign In</a></li>
+            <li><a href="aous.html">About Us</a></li>
+            <li id="cart-btn">
+                <span id="cart-count">0</span>
+            </li>
+        </ul>
+    </div>
+    <div class="top-nav2">
+        <div class="other-nav">
+            <ul>
+                <li><a href="shop.html?category">All</a></li>
+                <li><a href="shop.html?category=Featured">Sponsored</a></li>
+                <li><a href="shop.html?category=Holiday">Holiday</a></li>
+                <li><a href="shop.html?category=Food">Food</a></li>
+                <li><a href="shop.html?category=Pricey">Pricey</a></li>
+                <li><a href="shop.html?category=Cheepy">Cheepy</a></li>
+                <li><a id="surprise-link">Surprise Me</a></li>
+            </ul>
+        </div>
+    </div> 
+</header>
+
+<div id="ad-fullscreen" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:1000;">
+    <div id="ad-content"></div>
+    <button id="ad-skip" style="position:absolute; top:10px; right:10px;">✕</button>
+</div>
+
+<div id="ad-side">
+    <div id="ad-side-content"></div>
+    <button id="ad-close">X</button>
+</div>
+
+<div class="product">
+    <div class="image-area">
+        <div class="versions" id="image-thumbs"></div>
+        <img id="product-img" src="" alt="Product">
+    </div>
+
+    <div class="stuff">
+        <h1 id="product-name">Loading...</h1>
+
+        <br>Ships from and sold by:<br> <strong id="product-owner"></strong>
+
+        <br><br>Age: <strong id="product-age"></strong>
+        <div class="section">
+            <h3>Details:</h3>
+            <p id="product-details"></p>
+        </div>
+    </div>
+
+    <div class="buy">
+        <div class="productprice">
+            $<span id="product-price">99999999999999999.99</span><br>
+            <span id="product-exist">14</span> Exist
+        </div>        
+        <p style="color:rgb(117, 180, 0);">In Stock</p>
+        
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+</div>
+<section class="related-products">
+    <h2>Related Items</h2>
+    <div id="related-list" class="related-grid"></div>
+</section>
+<section class="reviews">
+    <h2>
+        Customer Reviews
+        <span id="avg-rating"></span>
+    </h2>
+    <div id="reviews-list"></div>
+</section>
+<audio autoplay loop>
+    <source src="sub.mp3" type="audio/mpeg">
+</audio>
+<footer>
+    <p>All rights reserved to &copy;The Yellow Store.</p>
+</footer>
+<script src="js/product.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
