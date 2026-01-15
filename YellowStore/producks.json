@@ -41,7 +41,7 @@
     "category": "Featured, Cheepy",
     "adVisual": {
       "type": "gif",
-      "src": "img/Salam.png",
+      "src": "img/salam.png",
       "link": "ads/factory.html"
     },"altImages": [
     "side-img/Asian_1.png",
@@ -355,7 +355,7 @@
     "id": "sin",
     "name": "Sign",
     "price": 40.49,
-    "iconimage": "img/Sign.png",
+    "iconimage": "img/sign.png",
     "description": "Something that can have words on it.",
     "details": "Can have words on it. Is bigger than a thumb.",
     "adType": "None",
@@ -1100,18 +1100,18 @@
   },
   {
     "id": "lotus",
-    "name": "Lotus",
+    "name": "Lotusade",
     "price": 5.39,
     "iconimage": "img/lotus.png",
     "description": "Not the ones that can revive you.",
     "details": "Juices are capable of melting nails.",
-    "adType": "None",
+    "adType": "Start",
     "exist": "89",
     "category": "Featured",
     "adVisual": {
-      "type": "",
-      "src": "",
-      "link": ""
+      "type": "image",
+      "src": "img/null.png",
+      "link": "index.html"
     },"altImages": [
     "side-img/Lotus_1.png"],
     "age":"5",
