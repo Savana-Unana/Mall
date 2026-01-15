@@ -1,8 +1,4 @@
-/* ----- Utility / state ----- */
 let cart = [];
-
-
-/* ----- Persistence ----- */
 function loadCart() {
   try {
     const storedCart = localStorage.getItem("cart");
@@ -28,7 +24,6 @@ function updateCartCount() {
 
 }
 
-/* ----- Add item (WITH GROUPING) ----- */
 function addItemToCart(product) {
   const existing = cart.find(item =>
     item.name === product.name &&
@@ -47,7 +42,6 @@ function addItemToCart(product) {
   renderSidebarCart();
 }
 
-/* ----- Remove item (reduces quantity) ----- */
 function removeItemFromCart(index) {
   const item = cart[index];
   if (!item) return;
@@ -64,7 +58,6 @@ function removeItemFromCart(index) {
   renderCartPage();
 }
 
-/* ----- Add-to-cart buttons ----- */
 function setupAddToCartButtons() {
   const buttons = document.querySelectorAll(".add-to-cart");
   if (!buttons || buttons.length === 0) {
@@ -78,7 +71,7 @@ function setupAddToCartButtons() {
         const name = button.dataset.name || "Unknown";
         const price = Number(button.dataset.price) || 0;
         const image = button.dataset.image || "";
-        const thumbnail = button.dataset.thumb || image; // fallback
+        const thumbnail = button.dataset.thumb || image;
 
         addItemToCart({ name, price, image, thumbnail });
       });
@@ -86,7 +79,6 @@ function setupAddToCartButtons() {
   });
 }
 
-/* ----- Sidebar rendering (FULLY FIXED) ----- */
 function renderSidebarCart() {
   ensureSidebarExists();
 
@@ -148,7 +140,6 @@ function renderSidebarCart() {
   });
 }
 
-/* ----- Sidebar open/close ----- */
 function openSidebarCart() {
   ensureSidebarExists();
   const sidebar = document.getElementById("cart-sidebar");
@@ -227,7 +218,7 @@ function renderCartPage() {
         </p>
       </div>
 
-      <button style="box-shadow: 0 0 6px #ffff00; font-family: 'Tale'; background-color: #c6c600; font-size:16px; cursor:pointer;" class="remove" data-index="${index}">Remove</button>
+      <button style="box-shadow: 0 0 6px #ffff00; font-family: 'Comic Sans MS', sans-serif; background-color: #c6c600; font-size:16px; cursor:pointer;" class="remove" data-index="${index}">Remove</button>
     `;
 
     cartContainer.appendChild(row);
@@ -247,7 +238,6 @@ function renderCartPage() {
   });
 }
 
-/* ----- Helpers ----- */
 function escapeHtml(str) {
   if (!str) return "";
   return String(str).replace(/[&<>"']/g, s => {
@@ -256,7 +246,6 @@ function escapeHtml(str) {
   });
 }
 
-/* ----- Sidebar creation (unchanged) ----- */
 function ensureSidebarExists() {
   if (document.getElementById("cart-sidebar")) return;
 
@@ -318,7 +307,6 @@ function ensureSidebarExists() {
   setupSidebarControls();
 }
 
-/* ----- Init ----- */
 document.addEventListener("DOMContentLoaded", () => {
   loadCart();
   updateCartCount();

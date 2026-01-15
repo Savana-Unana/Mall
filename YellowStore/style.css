@@ -6,8 +6,6 @@ body, html{
     font-family: "Comic Sans MS", sans-serif;
 }
 
-@font-face{ font-family: 'Tale'; src: url('fonts/Round.otf'); }
-
 header{
     padding: 15px 0;
     padding-bottom: 0px;
@@ -52,7 +50,6 @@ h2{
     list-style: none;
     padding: 0;
 }
-
 
 .other-nav li{
     padding: 4px;
@@ -207,22 +204,22 @@ footer{
 #ad-side {
     position: fixed;
     top: 0;
-    right: -320px; /* hide offscreen */
+    right: -320px;
     width: 300px;
     height: 100%;
     background: white;
     box-shadow: -2px 0 10px rgba(0,0,0,0.2);
     z-index: 1000;
     transition: right 0.3s ease;
-    display: block; /* keep in DOM */
+    display: block;
 }
 
 #ad-side.show {
-    right: 0; /* slide in */
+    right: 0;
 }
 
 .side-ad-open {
-    overflow: hidden; /* prevent background scroll */
+    overflow: hidden;
 }
 
 #ad-close {
@@ -237,7 +234,6 @@ footer{
     border-radius: 4px;
     z-index: 1010;
 }
-
 
 body.side-ad-open .product-wrapper{
     margin-right: 350px;
@@ -549,24 +545,11 @@ body.side-ad-open .product-wrapper{
     background: rgba(255,255,255,0.05);
     border: 2px solid white;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
 }
 
-.content-section img,
-.content-section video{
-    max-width: 300px;
-    display: block;
-    margin: 20px auto;
-    margin-top: 40px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.content-section img:hover,
-.content-section video:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 20px white, 0 0 20px white;
-    filter: brightness(1.2);
+.contact-section p{
+    text-align: left;
 }
 
 .contact-section{
@@ -589,7 +572,7 @@ body.side-ad-open .product-wrapper{
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    font-family: 'Tale', cursive;
+    font-family: "Comic Sans MS", sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     color: white;
@@ -651,7 +634,6 @@ body.side-ad-open .product-wrapper{
     color: gold;
 }
 
-/* ---------------- Stuff & Headings ---------------- */
 .stuff {
     flex: 1;
 }
@@ -662,7 +644,6 @@ body.side-ad-open .product-wrapper{
     text-shadow: 0 0 6px #ffd700, 0 0 12px #ffea33;
 }
 
-/* ---------------- Sections ---------------- */
 .section {
     margin-top: 16px;
 }
@@ -672,7 +653,6 @@ body.side-ad-open .product-wrapper{
     text-shadow: 0 0 6px #fff8a0, 0 0 12px #ffdd33;
 }
 
-/* ---------------- Buy Box ---------------- */
 .buy {
     width: 260px;
     border: 1px solid rgba(255, 238, 59, 0.3);
@@ -698,7 +678,6 @@ body.side-ad-open .product-wrapper{
     box-shadow: 0 0 14px #ffd700, 0 0 20px #ffea33 inset;
 }
 
-/* ---------------- Reviews ---------------- */
 .reviews {
     background: linear-gradient(120deg, #262800, #403300);
     max-width: 1100px;
@@ -732,7 +711,6 @@ body.side-ad-open .product-wrapper{
     margin-bottom: 4px;
 }
 
-/* ---------------- Individual Review ---------------- */
 .review {
     margin-top: 16px;
     border-top: 1px solid rgba(255, 238, 59, 0.3);
@@ -760,7 +738,6 @@ body.side-ad-open .product-wrapper{
     color: #fffa90;
 }
 
-/* ---------------- Image & Versions ---------------- */
 .image-area {
     display: flex;
     gap: 10px;
@@ -800,7 +777,6 @@ body.side-ad-open .product-wrapper{
     font-family: "Comic Sans MS", sans-serif;
 }
 
-/* ---------------- Content Section ---------------- */
 .content-section {
     margin: 50px 20px;
     padding: 20px;
@@ -828,7 +804,6 @@ body.side-ad-open .product-wrapper{
     filter: brightness(1.25);
 }
 
-/* ---------------- Contact Section ---------------- */
 .contact-section {
     max-width: 600px;
     margin: 50px auto;
@@ -850,7 +825,7 @@ body.side-ad-open .product-wrapper{
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    font-family: 'Tale', cursive;
+    font-family: "Comic Sans MS", sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     color: #fff8c6;
@@ -867,7 +842,6 @@ body.side-ad-open .product-wrapper{
     text-shadow: 0 0 8px #fff8a0;
 }
 
-/* ---------------- Related Products ---------------- */
 .related-products {
     margin: 40px;
 }
@@ -883,7 +857,6 @@ body.side-ad-open .product-wrapper{
     gap: 15px;
 }
 
-/* ---------------- Average Stars ---------------- */
 .avg-stars {
     margin-left: 10px;
     color: gold;

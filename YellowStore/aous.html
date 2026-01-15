@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="../sfx/town.mp3" type="audio/mpeg">
-    </audio>
+<div id="cart-overlay" class="cart-overlay"></div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-sidebar-header">
+        <h2><a href="cart.html" style="text-decoration:none; color:inherit;">Your Cart</a></h2>
+        <button id="sidebar-close">X</button>
+    </div>
+    <div id="sidebar-items"></div>
+    <div class="sidebar-footer">
+        <div style="display:flex; justify-content:space-between;">
+            <span>Total:</span>
+            <span>$<span id="sidebar-total">0.00</span></span>
+        </div>
+        <br>
+    </div>
+</div>
 <header>
     <div class="top-nav">
         <a href="index.html"><img src="img/YStore.png" alt="Yellogo" class="logo"></a>
@@ -37,18 +49,24 @@
     </div>
 </header>
     <article class="site-content">
-        <h1>Spawn-Point</h1>
+        <h1 style="text-align: center;">About Us</h1>
             <div class="content-section">
-            <h2>Homegrounds</h2>
-            <p>I like calling the pretty large area my family "owns" the "Homegrounds." It makes it sound fun. My parents, my <span class="hover-swap" data-hover="4">5</span> siblings, and I all live there. We have a few small things there, but all of us kind of do our own things. Especially my parents, as they leave me to take care of the other four. At least my brother Chip takes care of the dog.</p>
-            <img src="img/candel.png" alt="Home Image">
+            <h2>Concept</h2>
+            <p>The concept was not actually based off of nothing. It was inspired by Omega Mart and The Awesome Store, more of the former. It was given lore, story, and concepts over Winter Break, however they weren't entirely acted upon.</p>
+            <h2>Further On</h2>
+            <p>If you couldn't see, the website is up online. I plan to continue working on it, adding more products, making the planned ads, including lore, especially un-AIing the website (in both scripts and images), etc.</p>
+            <h2>The Store</h2>
+            <p>The Yellow Store is an interdimensional store, picking up both products and customers across realities to provide the most across worlds.</p>
+            <img src="img/YStore.png" alt="Logo">
     </article>
 <audio autoplay loop>
     <source src="sub.mp3" type="audio/mpeg">
 </audio>
+<a style="padding:10px 20px; box-shadow: 0 0 6px #ffff00; background-color: #c6c600; font-size:16px; cursor:pointer; color: black; text-decoration: none;" href="contact.html">Contact Us</a>
 <footer style="margin-top:50px; text-align:center;">
     <p>All rights reserved to &copy;The Yellow Store.</p>
 </footer>
     </div>
+<script src="js/cart.js"></script>
 </body>
 </html>

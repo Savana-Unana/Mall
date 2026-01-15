@@ -145,15 +145,13 @@ function showRelatedProducts(product, allProducts) {
     });
 }
 
-
 function showAd(product){
     if(!product.adType || product.adType === "None") return;
     if(!product.adVisual || !product.adVisual.type) return;
 
-    const visual = product.adVisual; // keep the object
+    const visual = product.adVisual;
 
     if(product.adType === "Start"){
-        // create HTML string for fullscreen ad
         let element = "";
         if(visual.type === "image" || visual.type === "gif"){
             element = `<img src="${visual.src}" style="max-width:90%; max-height:80%;">`;
@@ -164,7 +162,6 @@ function showAd(product){
     }
 
     if(product.adType === "Side"){
-        // pass the object, not HTML string
         runSideAd(visual);
     }
 }
@@ -200,6 +197,8 @@ function runStartAd(element){
     skipBtn.textContent = `Skip in ${timeLeft}`;
     skipBtn.style.cursor = "default";
 
+    let canSkip = false;
+
     const timer = setInterval(() => {
         timeLeft--;
         if(timeLeft > 0){
@@ -207,15 +206,27 @@ function runStartAd(element){
         } else {
             skipBtn.textContent = "✕";
             skipBtn.style.cursor = "pointer";
+            canSkip = true;
             clearInterval(timer);
         }
     }, 1000);
 
     skipBtn.onclick = () => {
+        if (!canSkip) return;
         adBox.style.display = "none";
-        clearInterval(timer);
     };
 }
+
+function isExternalLink(url) {
+    try {
+        const link = new URL(url, window.location.origin);
+        return link.origin !== window.location.origin;
+    } catch {
+        return false; // invalid URL treated as internal
+    }
+}
+
+
 
 function runSideAd(visual) {
     const side = document.getElementById("ad-side");
@@ -224,7 +235,6 @@ function runSideAd(visual) {
 
     if (!side || !sideContent || !closeBtn) return;
 
-    // Wrap the visual in a clickable link if provided
     let element = "";
     if (visual.type === "image" || visual.type === "gif") {
         element = `<a href="${visual.link || '#'}" target="_blank">
@@ -238,13 +248,10 @@ function runSideAd(visual) {
 
     sideContent.innerHTML = element;
 
-    // Slide in after a tiny delay to trigger CSS transition
     setTimeout(() => side.classList.add("show"), 10);
 
-    // Prevent scrolling behind ad
     document.body.classList.add("side-ad-open");
 
-    // Close button
     closeBtn.onclick = () => {
         side.classList.remove("show");
         document.body.classList.remove("side-ad-open");

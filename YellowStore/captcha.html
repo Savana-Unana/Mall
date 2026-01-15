@@ -62,8 +62,7 @@
   </div>
   <div id="status"></div>
 </div>
-
-<script>
+<button onclick="history.back()" style="position: absolute; top: 0px; left: 0px;">Back</button><script>
 const stepContent = document.getElementById("stepContent");
 const stepNumEl = document.getElementById("stepNum");
 const status = document.getElementById("status");
@@ -172,6 +171,15 @@ function submitSlider(){
     if(parseFloat(slider.value).toFixed(2) >= 73.40 && parseFloat(slider.value).toFixed(2) <= 73.44){
         status.style.color="green";
         status.textContent="Verification complete. Redirecting…";
+        setTimeout(()=>{
+            alert("Error: Unexpected verification failure. Please try again.");
+            step=1;
+            loadStep();
+            slider.value=50;
+            sliderWrap.style.display="none";
+            status.style.color="#b00020";
+            status.textContent="";
+        }, 800);
     } else {
         status.style.color="#b00020";
         status.textContent="Failed final step. Restarting…";
@@ -183,7 +191,6 @@ function submitSlider(){
 }
 
 loadStep();
-
 </script>
 </body>
 </html>

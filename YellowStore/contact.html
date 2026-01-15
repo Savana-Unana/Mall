@@ -3,70 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me!</title>
+    <title>Contact Us - The Yellow Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="top-nav">
-        <a href="index.html"><img src="img/YStore.png" alt="Yellogo" class="logo"></a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="captcha.html">Sign In</a></li>
-            <li><a href="aous.html">About Us</a></li>
-            <li id="cart-btn">
-                <span id="cart-count">0</span>
-            </li>
-        </ul>
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2><a href="cart.html" style="text-decoration:none; color:inherit;">Your Cart</a></h2>
+            <button id="sidebar-close">X</button>
+        </div>
+        <div id="sidebar-items"></div>
+        <div class="sidebar-footer">
+            <div style="display:flex; justify-content:space-between;">
+                <span>Total:</span>
+                <span>$<span id="sidebar-total">0.00</span></span>
+            </div>
+            <br>
+        </div>
     </div>
-    <div class="top-nav2">
-        <div class="other-nav">
+
+    <header>
+        <div class="top-nav">
+            <a href="index.html"><img src="img/YStore.png" alt="Yellogo" class="logo"></a>
             <ul>
-                <li><a href="shop.html?category">All</a></li>
-                <li><a href="shop.html?category=Featured">Sponsored</a></li>
-                <li><a href="shop.html?category=Holiday">Holiday</a></li>
-                <li><a href="shop.html?category=Food">Food</a></li>
-                <li><a href="shop.html?category=Pricey">Pricey</a></li>
-                <li><a href="shop.html?category=Cheepy">Cheepy</a></li>
-                <li><a id="surprise-link">Surprise Me</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="captcha.html">Sign In</a></li>
+                <li><a href="aous.html">About Us</a></li>
+                <li id="cart-btn"><span id="cart-count">0</span></li>
             </ul>
         </div>
-    </div>  
-</header>
-
-        <article class="site-content">
-            <div class="contact-section">
-                <h2>Contact Information</h2>
-
-                <table style="margin: 0 auto; border-collapse: collapse; width: 80%;">
-                    <tr>
-                        <th style="border: 2px solid white; padding: 10px;">Detail</th>
-                        <th style="border: 2px solid white; padding: 10px;">Details</th>
-                    </tr>
-                    <tr>
-                        <td style="border: 2px solid white; padding: 10px;">Name</td>
-                        <td style="border: 2px solid white; padding: 10px;">Skip Upro</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 2px solid white; padding: 10px;">Email</td>
-                        <td style="border: 2px solid white; padding: 10px;">bandobelators@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 2px solid white; padding: 10px;">Phone</td>
-                        <td style="border: 2px solid white; padding: 10px;">754-726-3747</td>
-                    </tr>
-                </table>
-
-                <h3 style="margin-top: 40px;">Send Me a Message</h3>
-                <p>Press the button below to email me now!</p>
-                <a href="mailto:yourname@example.com?subject=Travel%20Blog%20Message&body=Hello%20Skip%2C%0A%0A">Email Me</a>
+        <div class="top-nav2">
+            <div class="other-nav">
+                <ul>
+                    <li><a href="shop.html?category">All</a></li>
+                    <li><a href="shop.html?category=Featured">Sponsored</a></li>
+                    <li><a href="shop.html?category=Holiday">Holiday</a></li>
+                    <li><a href="shop.html?category=Food">Food</a></li>
+                    <li><a href="shop.html?category=Pricey">Pricey</a></li>
+                    <li><a href="shop.html?category=Cheepy">Cheepy</a></li>
+                    <li><a id="surprise-link">Surprise Me</a></li>
+                </ul>
             </div>
-        </article>
-<audio autoplay loop>
-    <source src="Yw.mp3" type="audio/mpeg">
-</audio>
-<footer>
-    <p>All rights reserved to &copy;The Yellow Store.</p>
-</footer>
+        </div>
+    </header>
+
+    <main class="site-content">
+        <div class="contact-section" style="max-width: 800px; margin: 40px auto; text-align: center;">
+            <h1>Contact Us</h1>
+            <p style="margin-bottom: 30px;">We’d love to hear from you! Reach out with any questions, feedback, or product inquiries.</p>
+
+            <table style="margin: 0 auto; border-collapse: collapse; width: 100%; max-width: 600px;">
+                <tr>
+                    <th style="border: 2px solid white; padding: 10px; text-align:left;">Detail</th>
+                    <th style="border: 2px solid white; padding: 10px; text-align:left;">Information</th>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid white; padding: 10px;">Email</td>
+                    <td style="border: 2px solid white; padding: 10px;">████████████@gmail.com</td>
+                </tr>
+                <tr>
+                    <td style="border: 2px solid white; padding: 10px;">Phone</td>
+                    <td style="border: 2px solid white; padding: 10px;">935-569-████</td>
+                </tr>
+            </table>
+
+            <h2 style="margin-top: 50px;">Send Us a Message</h2>
+            <form action="/submit-contact" method="POST" style="margin-top:20px; display:flex; flex-direction:column; gap:15px; max-width:600px; margin-left:auto; margin-right:auto;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding:10px; border:1px solid #ccc; border-radius:4px;">
+                <input type="email" name="email" placeholder="Your Email" required style="padding:10px; border:1px solid #ccc; border-radius:4px;">
+                <input type="text" name="subject" placeholder="Subject" required style="padding:10px; border:1px solid #ccc; border-radius:4px;">
+                <textarea name="message" placeholder="Your Message" required rows="6" style="padding:10px; border:1px solid #ccc; border-radius:4px;"></textarea>
+                <button type="submit" style="padding:12px; background-color:#c6c600; color:black; border:none; cursor:pointer; font-size:16px; box-shadow:0 0 6px #ffff00;">Send Message</button>
+            </form>
+
+            <h2 style="margin-top:50px;">Job Application</h2>
+            <p>Scan the QR code below to apply for a position with The Yellow Store:</p>
+            <div style="margin-top:20px;">
+                <img src="img/JQR.png" alt="QR Image" style="max-width:200px; width:100%; border:2px solid white; padding:10px; border-radius:8px;">
+            </div>
+        </div>
+    </main>
+
+    <audio autoplay loop>
+        <source src="Yw.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer style="text-align:center; margin-top:50px; padding:20px 0;">
+        <p>All rights reserved &copy; The Yellow Store.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
 </body>
 </html>
