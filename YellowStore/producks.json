@@ -597,7 +597,7 @@
     "category": "Featured, Pricey",
     "adVisual": {
       "type": "image",
-      "src": "img/Null.png",
+      "src": "img/null.png",
       "link": "index.html"
     },"altImages": [
     "side-img/Gold_1.png",
