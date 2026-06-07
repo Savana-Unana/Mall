@@ -4,15 +4,26 @@ import products from './data/products.json';
 import './style.css';
 import './react.css';
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+const basePath = baseUrl === '/' ? '' : baseUrl.replace(/\/$/, '');
+
+const withBase = (href = '/') => {
+  if (/^(https?:|data:|blob:)/i.test(href)) return href;
+  const cleanHref = href.startsWith('/') ? href : `/${href}`;
+  return `${basePath}${cleanHref}`;
+};
+
 const asset = (src = '') => {
   if (!src) return '';
-  if (/^(https?:|data:|\/)/i.test(src)) return src;
-  return `/assets/${src}`;
+  if (/^(https?:|data:|blob:)/i.test(src)) return src;
+  const cleanSrc = src.replace(/^\/+/, '');
+  return withBase(`/assets/${cleanSrc}`);
 };
 
 const appLink = (href = '') => {
   if (!href) return '#';
-  if (/^(https?:|\/)/i.test(href)) return href;
+  if (/^https?:/i.test(href)) return href;
+  if (href.startsWith('/')) return href;
   return asset(href);
 };
 
@@ -36,20 +47,28 @@ const shuffle = (items) => {
 };
 
 function useRoute() {
+  const readRoute = () => {
+    const rawPath = window.location.pathname;
+    const path = basePath && rawPath.startsWith(basePath)
+      ? rawPath.slice(basePath.length) || '/'
+      : rawPath || '/';
+    return { path, search: window.location.search };
+  };
+
   const [route, setRoute] = useState({
-    path: window.location.pathname,
-    search: window.location.search,
+    ...readRoute(),
   });
 
   useEffect(() => {
-    const onPop = () => setRoute({ path: window.location.pathname, search: window.location.search });
+    const onPop = () => setRoute(readRoute());
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
   const navigate = (href) => {
-    window.history.pushState({}, '', href);
-    setRoute({ path: window.location.pathname, search: window.location.search });
+    const target = href.startsWith('/') ? withBase(href) : href;
+    window.history.pushState({}, '', target);
+    setRoute(readRoute());
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -100,9 +119,11 @@ function useCart() {
 }
 
 function Link({ href, navigate, children, ...props }) {
+  const resolvedHref = href.startsWith('/') ? withBase(href) : href;
+
   return (
     <a
-      href={href}
+      href={resolvedHref}
       onClick={(event) => {
         event.preventDefault();
         navigate(href);
@@ -130,7 +151,14 @@ function Header({ navigate, cartCount, onOpenCart }) {
           <li><Link href="/" navigate={navigate}>Home</Link></li>
           <li><Link href="/signin" navigate={navigate}>Sign In</Link></li>
           <li><Link href="/about" navigate={navigate}>About Us</Link></li>
-          <li id="cart-btn" onClick={onOpenCart} aria-label="Open cart" role="button" tabIndex="0">
+          <li
+            id="cart-btn"
+            style={{ backgroundImage: `url(${asset('img/car.png')})` }}
+            onClick={onOpenCart}
+            aria-label="Open cart"
+            role="button"
+            tabIndex="0"
+          >
             <span id="cart-count">{cartCount}</span>
           </li>
         </ul>
@@ -372,10 +400,11 @@ function AdVisual({ visual, navigate }) {
 
   const href = appLink(visual.link);
   const isInternal = href.startsWith('/');
+  const resolvedHref = isInternal ? withBase(href) : href;
 
   return (
     <a
-      href={href}
+      href={resolvedHref}
       onClick={(event) => {
         if (!isInternal || !navigate) return;
         event.preventDefault();
