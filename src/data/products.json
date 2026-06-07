@@ -42,7 +42,7 @@
     "adVisual": {
       "type": "gif",
       "src": "img/salam.png",
-      "link": "ads/factory.html"
+      "link": "/ad/factory"
     },"altImages": [
     "side-img/Asian_1.png",
     "side-img/Asian_2.png",
@@ -241,7 +241,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/null.png",
-      "link": "index.html"
+      "link": "/"
     },"altImages": [
     "side-img/Bell_1.png",
     "side-img/Bell_2.png"],
@@ -468,7 +468,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/null.png"
-      ,"link": "index.html"
+      ,"link": "/"
     },"altImages": [
     "side-img/Raincoat_1.png",
     "side-img/Raincoat_2.png"],
@@ -598,7 +598,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/Null.png",
-      "link": "index.html"
+      "link": "/"
     },"altImages": [
     "side-img/Gold_1.png",
     "side-img/Gold_2.png",
@@ -664,7 +664,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/null.png",
-      "link": "index.html"
+      "link": "/"
     },"altImages": [
     "side-img/Sponge_1.png",
     "side-img/Sponge_2.png"],
@@ -739,7 +739,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/null.png",
-      "link": "index.html"
+      "link": "/"
     },"altImages": [
     "side-img/Mustard_1.png",
     "side-img/Mustard_2.png",
@@ -772,7 +772,7 @@
       "src": "",
       "link": ""
     },"altImages": [
-    "side-img/Pencil_1.png"],
+    "side-img/Pencil_1.PNG"],
     "age":"0",
     "owner":"The Yellow Store",
     "associate":["sponge"],
@@ -828,7 +828,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/null.png",
-      "link": "index.html"
+      "link": "/"
     },"altImages": [
     "side-img/Pasta_1.png",
     "side-img/Pasta_2.png"],
@@ -875,7 +875,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/YAAI.png",
-      "link": "ads/h4kd.html"
+      "link": "/ad/h4kd"
     },"altImages": [
     "img/YAAI.png",
     "img/AYAI.png",
@@ -1111,7 +1111,7 @@
     "adVisual": {
       "type": "image",
       "src": "img/null.png",
-      "link": "index.html"
+      "link": "/"
     },"altImages": [
     "side-img/Lotus_1.png"],
     "age":"5",

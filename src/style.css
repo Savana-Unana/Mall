@@ -76,7 +76,7 @@ h2{
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background-image: url("img/car.png");
+    background-image: url("/assets/img/car.png");
     background-repeat: no-repeat;
     background-size: 32px 32px;
     background-position: center;
@@ -243,12 +243,13 @@ body.side-ad-open .product-wrapper{
 .cart-sidebar{
   position: fixed;
   top: 0;
-  right: -400px;
+  right: 0;
   width: 350px;
   height: 100%;
   background: rgb(85, 71, 0);
   box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-  transition: right 0.3s;
+  transform: translateX(100%);
+  transition: transform 0.3s;
   padding: 15px;
   z-index: 1000;
   display: flex;
@@ -256,7 +257,7 @@ body.side-ad-open .product-wrapper{
 }
 
 .cart-sidebar.show{
-  right: 0;
+  transform: translateX(0);
 }
 
 .cart-overlay{
