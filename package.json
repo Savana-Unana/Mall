@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "postbuild": "node -e \"import('node:fs').then(fs=>fs.copyFileSync('dist/index.html','dist/404.html'))\"",
+    "build:pages": "vite build --outDir docs",
+    "postbuild:pages": "node -e \"import('node:fs').then(fs=>fs.copyFileSync('docs/index.html','docs/404.html'))\"",
     "preview": "vite preview"
   },
   "dependencies": {
